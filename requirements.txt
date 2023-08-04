@@ -2,3 +2,9 @@ Django==4.2.3
 Pillow==10.0.0
 cart==1.2.2
 django-crispy-forms==2.0
+ipython==8.14.0
+django-extensions==3.2.3
+djangorestframework==3.14.0
+Markdown==3.4.4
+django-filter==23.2
+
