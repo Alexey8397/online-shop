@@ -12,21 +12,27 @@
 <a href="/" class="logo">Online-shop</a>
 </div>
 <div id="subheader">
-    <div class="cart">
-        {% with total_items=cart|length %}
-        {% if cart|length > 0 %}
+    <div class="basket">
+        {% with total_items=basket|length %}
+        {% if basket|length > 0 %}
         В корзине:
-        <a href="{% url 'cart:cart_detail' %}">
-         {{ total_items }} шт ,${{ cart.get_total_price }}
+        <a href="{% url 'basket:basket_detail' %}">
+         {{ total_items }} шт ,${{ basket.get_total_price }}
          </a>
         {% else %}
         <button type="submit">Корзина пустая</button>
-        <button type="submit">Войти</button>
         {% endif %}
         {% endwith %}
     </div>
 </div>
 <div id="content">
+    {% if messages %}
+        	{% for message in messages %}
+          	<div class="alert alert-{{ message.tags }}">
+            	{{ message }}
+          	</div>
+        	{% endfor %}
+{% endif %}
 {% block content %}{% endblock %}
 </div>
 </body>
