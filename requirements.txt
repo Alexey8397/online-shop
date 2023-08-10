@@ -7,4 +7,7 @@ django-extensions==3.2.3
 djangorestframework==3.14.0
 Markdown==3.4.4
 django-filter==23.2
+django-debug-toolbar==4.1.0
+pytest==7.4.0
+
 
